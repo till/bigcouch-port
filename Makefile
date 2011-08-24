@@ -9,19 +9,18 @@ PORTNAME=	bigcouch
 PORTVERSION=	0.3.1
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/cloudant/bigcouch/zipball/
-DISTNAME=	${PORTNAME}-${PORTVERSION}
 EXTRACT_SUFX=
 
 MAINTAINER=	till@php.net
 COMMENT=	BigCouch is a clustered version of Apache CouchDB
-
-WRKSRC=		${WRKDIR}/cloudant-${PORTNAME}-c5084ae
 
 LIB_DEPENDS=	icudata:${PORTSDIR}/devel/icu \
 		js:${PORTSDIR}/lang/spidermonkey \
 		curl.6:${PORTSDIR}/ftp/curl
 BUILD_DEPENDS=	${LOCALBASE}/bin/help2man:${PORTSDIR}/misc/help2man \
 		git:${PORTSDIR}/devel/git
+
+WRKSRC=		${WRKDIR}/cloudant-${PORTNAME}-c5084ae
 
 USERS=		bigcouch
 GROUPS=		bigcouch
