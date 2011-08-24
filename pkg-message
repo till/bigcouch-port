@@ -1,0 +1,7 @@
+===>  DEVELOPERS, DEVELOPERS, DEVELOPERS:
+      If you want to try out BigCouch and create a small development cluster,
+      just go into work/cloudant-bigcouch-XXX and type 'gmake dev'.
+
+      More info:
+        * https://github.com/cloudant/bigcouch#readme
+

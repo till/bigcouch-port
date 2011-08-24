@@ -1,0 +1,20 @@
+#!/bin/sh
+
+COUCH_USER=bigcouch
+COUCH_GROUP=bigcouch
+
+CHOWN="/usr/sbin/chown -R"
+MKDIR="/bin/mkdir -p"
+
+COUCH_DBDIR=/var/db/bigcouch
+COUCH_LOGDIR=/var/log/bigcouch
+COUCH_LIBDIR=/var/lib/bigcouch
+
+if [ "$2" = "POST-INSTALL" ]; then
+	${MKDIR} ${COUCH_DBDIR}/databases ${COUCH_DIR}/views ${COUCH_LOGDIR} ${COUCH_LIBDIR}
+	${CHOWN} ${COUCH_USER}:${COUCH_GROUP} ${COUCH_DBDIR}
+	${CHOWN} ${COUCH_USER}:${COUCH_GROUP} ${COUCH_LOGDIR}
+	${CHOWN} ${COUCH_USER}:${COUCH_GROUP} ${COUCH_LIBDIR}
+fi
+
+exit 0
