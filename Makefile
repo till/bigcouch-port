@@ -26,7 +26,6 @@ USERS=		bigcouch
 GROUPS=		bigcouch
 
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
